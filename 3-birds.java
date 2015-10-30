@@ -160,7 +160,7 @@ class Ball {
 
 class Bird {
   //// PROPERTIES:  position, speed, color, etc. ////   (What a Bird "has".)
-  float x=0,y=50, dx=5,dy=0.5;
+  float x=0,y=random(50,150), dx=5,dy=0.5;
   float w=60;
   int r,g,b;
   int number;
