@@ -1,8 +1,10 @@
-//////// Multiple Balls and Birds
+//////// Multiple Balls and Birds.  Click bird or ball to reset.  Keys:  a, b, c, and A
 // 3-birds.java //
 
 Ball a,b,c,d,e;
 Bird hawk, oriole, jay;
+
+String s="Click bird or ball to reset.  \nKeys:  a, b, c, r = reset \n A = speed up!";
 
 float horizon;
 
@@ -43,6 +45,7 @@ void draw() {
   scene();
   birds();
   balls();
+  text( s, width/2, 20 );
 }
 
 //// SCENE:  sky & grass.
