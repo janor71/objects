@@ -100,9 +100,8 @@ void keyPressed() {
   if (key == 'b') b.reset();
   if (key == 'c') c.reset();
   if (key == 'r') {
-        a.reset();
-        b.reset();
-        c.reset();
+        a.reset();        b.reset();        c.reset();
+        hawk.reset();     oriole.reset();   jay.reset();
   }
   if (key == 'A') {
     a.dx *= 2;          // Make a ball go faster!
