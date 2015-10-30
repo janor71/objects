@@ -1,4 +1,5 @@
 //////// Multiple Balls and Birds
+// 3-birds.java //
 
 Ball a,b,c,d,e;
 Bird hawk, oriole, jay;
