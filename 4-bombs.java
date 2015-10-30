@@ -45,7 +45,7 @@ void draw() {
 
 //// SCENE:  sky & grass.
 void scene() {
-  background(100,200,250);
+  background(100,150,200);
   fill( 100,250,150 );
   rect( 0,horizon, width, height-horizon );
   fill(255,200,0);
@@ -205,7 +205,7 @@ class Bird {
   void reset() {
       x=0;
       y=  random( 50, horizon-30 );
-      dx=  random( 1, 10 );
+      dx=  random( 1, 6 );
       bombDY=0;
   }
 }
