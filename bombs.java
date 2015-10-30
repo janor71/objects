@@ -174,7 +174,7 @@ class Bird {
     }
   }
   void drop() {
-    bombY=  y;
+    bombY=  y+10;
     bombDY=  gravity;
   }
   void show() {
@@ -191,7 +191,7 @@ class Bird {
     // Show bomb, if DY>0;
     if (bombDY>0) {
       fill(r,g,b);
-      ellipse( x,bombY, 30,70 );
+      ellipse( x-w,bombY, 30,70 );
       text( bombY, 10,30 );
     }
   }
