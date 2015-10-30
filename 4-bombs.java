@@ -199,7 +199,7 @@ class Bird {
     }
   }
   boolean hit( float x, float y ) {
-    if (  dist( x,y, this.x,this.y ) < 30 ) return true;
+    if (  dist( x,y, this.x-30,this.y ) < 30 ) return true;
     else return false;
   }
   void reset() {
