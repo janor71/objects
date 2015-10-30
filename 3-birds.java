@@ -4,7 +4,7 @@
 Ball a,b,c,d,e;
 Bird hawk, oriole, jay;
 
-String s="Click bird or ball to reset.  \nKeys:  a, b, c, r = reset \n A = speed up!";
+String s="Click bird or ball to reset.  \nKeys:  r, a, b, c, h, i, j = reset \n A = speed up!";
 
 float horizon;
 
@@ -108,6 +108,9 @@ void keyPressed() {
     a.dx *= 2;          // Make a ball go faster!
     a.dy *= 2;
   }
+  if (key == 'h') { hawk.reset(); }
+  if (key == 'i') { oriole.reset(); }
+  if (key == 'j') { jay.reset(); }
 }
 void mousePressed() {
   if ( hawk.hit( mouseX,mouseY ) ) {  hawk.reset(); }
