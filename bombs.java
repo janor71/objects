@@ -1,6 +1,6 @@
 //////// Multiple Balls and Birds
 
-Ball a,b,c,d,e;
+Ball a,b,c,d,e, f, g;
 Bird hawk, oriole, jay;
 
 float horizon;
@@ -17,11 +17,6 @@ void setup() {
   b.g=255;
   b.name=  "b";
   //
-  c=  new Ball();
-  c.g=255;
-  c.b=255;
-  c.name=  "c";
-  //
   hawk=  new Bird();
   oriole=  new Bird();
   oriole.r=255;
@@ -34,7 +29,6 @@ void setup() {
 void reset() {
   a.reset();
   b.reset();
-  c.reset();
 }
 
 //// NEXT FRAME:  scene, birds, balls.
@@ -42,6 +36,8 @@ void draw() {
   scene();
   birds();
   balls();
+  text( "Click on bird to drop bomb!", 10,10 );
+  text( "Press h, i, j keys to drop bombs!", width*2/3, height-15 );
 }
 
 //// SCENE:  sky & grass.
@@ -69,14 +65,10 @@ void birds() {
 void balls() {
   a.move();
   b.move();
-  c.move();
   collision( a, b );
-  collision( a, c );
-  collision( b, c );
   //
   a.show();
   b.show();
-  c.show();
 }
 
 //// Elastic collisions.
@@ -94,11 +86,9 @@ void keyPressed() {
   if (key == 'q') exit();
   if (key == 'a') a.reset();
   if (key == 'b') b.reset();
-  if (key == 'c') c.reset();
   if (key == 'r') {
         a.reset();
         b.reset();
-        c.reset();
   }
   if (key == 'A') {
     a.dx *= 2;          // Make a ball go faster!
@@ -115,7 +105,6 @@ void mousePressed() {
   //
   if ( a.hit( mouseX,mouseY ) ) {  a.reset(); }
   if ( b.hit( mouseX,mouseY ) ) {  b.reset(); }
-  if ( c.hit( mouseX,mouseY ) ) {  c.reset(); }
 }
     
 
@@ -185,6 +174,7 @@ class Bird {
     }
   }
   void drop() {
+    bombY=  y;
     bombDY=  gravity;
   }
   void show() {
