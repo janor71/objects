@@ -4,6 +4,9 @@
 Ball a,b,c,d,e, f, g;
 Bird hawk, oriole, jay;
 
+String s="Click on bird's nose to drop bomb! \n(or press keys h, i, j)";
+
+
 float horizon;
 
 void setup() {
@@ -37,8 +40,7 @@ void draw() {
   scene();
   birds();
   balls();
-  text( "Click on bird to drop bomb!", 10,10 );
-  text( "Press h, i, j keys to drop bombs!", width*2/3, height-15 );
+  text( s, 10,10 );
 }
 
 //// SCENE:  sky & grass.
