@@ -1,4 +1,5 @@
 //////// Multiple Balls and Birds
+// 4-bombs.java //
 
 Ball a,b,c,d,e, f, g;
 Bird hawk, oriole, jay;
@@ -42,8 +43,8 @@ void draw() {
 
 //// SCENE:  sky & grass.
 void scene() {
-  background(150,200,250);
-  fill( 150,250,150 );
+  background(100,200,250);
+  fill( 100,250,150 );
   rect( 0,horizon, width, height-horizon );
   fill(255,200,0);
   noStroke();
