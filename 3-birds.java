@@ -1,10 +1,16 @@
 //////// Multiple Balls and Birds.  Click bird or ball to reset.  Keys:  a, b, c, and A
 // 3-birds.java //
 
+// Add trees. //
+
+Tree t1, t2, t3;
+
+int[] list=  { 99,44, 22, 33, 77, 4 };
+
+
 Ball a,b,c,d,e;
 Bird hawk, oriole, jay;
 
-Tree t1, t2, t3;
 
 String s="Click bird or ball to reset.  \nKeys:  r, a, b, c, h, i, j = reset \n A = speed up!";
 
@@ -53,6 +59,15 @@ void draw() {
   birds();
   balls();
   text( s, width/2, 20 );
+  //  Add up the numbers, and get the average.
+  int many=  list.length;
+  int total=0;
+  for( int i=0; i<many; i++ ) {
+    total += list[i];
+  }
+  text( total, 10,10 );
+  text( total/many, 10,20 );
+
 }
 
 //// SCENE:  sky & grass.
@@ -67,7 +82,7 @@ void scene() {
   // Trees.
   t1.show();
   t2.show();
-  t3.show();
+  t3.show();  
 }
 
 //// Move and show birds
