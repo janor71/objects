@@ -65,8 +65,8 @@ void draw() {
   for( int i=0; i<many; i++ ) {
     total += list[i];
   }
-  text( total, 10,10 );
-  text( total/many, 10,20 );
+  text( "Total is:    "+total, 10,10 );
+  text( "Average is:  "+total/many, 10,20 );
 
 }
 
