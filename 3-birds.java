@@ -4,6 +4,8 @@
 Ball a,b,c,d,e;
 Bird hawk, oriole, jay;
 
+Tree t1, t2, t3;
+
 String s="Click bird or ball to reset.  \nKeys:  r, a, b, c, h, i, j = reset \n A = speed up!";
 
 float horizon;
@@ -11,6 +13,11 @@ float horizon;
 void setup() {
   size(750, 500 );
   horizon=  height/4;
+
+  t1=  new Tree( 100,horizon, 40,80 );
+  t2=  new Tree( 200,horizon+50, 60,90 );
+  t3=  new Tree( 300,horizon+25, 30,70 );
+
   a=  new Ball();
   a.r=255;
   a.b=255;
@@ -57,6 +64,10 @@ void scene() {
   noStroke();
   ellipse( frameCount%width, horizon-40-sin( (PI*frameCount/width) % PI )*horizon/2, 40, 40 );
   stroke(0);
+  // Trees.
+  t1.show();
+  t2.show();
+  t3.show();
 }
 
 //// Move and show birds
@@ -200,3 +211,24 @@ class Bird {
       
   }
 }
+
+
+class Tree{
+  float x, y;            // Position of base.
+  float trunk, leaves;   // Width of top, height of trunk;
+  // CONSTRUCTOR //
+  Tree( float x, float y, float leaves, float trunk ){
+    this.x=x;  this.y=y;
+    this.leaves=  leaves;
+    this.trunk=trunk;
+  }
+  // METHODS //
+  void show() {
+    fill(150,0,0);          // Brown
+    rect(x,y, leaves/6,-trunk );
+    fill(100,250,100);
+    ellipse( x, y-trunk, leaves, leaves );
+  }
+}
+
+
