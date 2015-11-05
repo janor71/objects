@@ -1,0 +1,52 @@
+ Bird b1;
+ int count = 0;
+ void setup() {
+   size(400,400);
+   b1= new Bird ();
+  
+ }
+void draw() {
+   background(255);
+   count = count +1;
+   b1. display();
+   b1. move();
+   
+ }
+  
+class Bird {
+  float birdX;
+  float birdY;
+  float birdDX; 
+ // int count = 0;
+ 
+ Bird () {
+     birdX = 30;
+     birdY = 30;
+     birdDX = 1;
+    // count = count +1;
+}
+
+void display () {
+     fill(240,34,61);
+     stroke(0);
+     ellipse(birdX, birdY, 60,10);
+     fill(183,31,34);
+     
+   if(count/30%2 == 0) {
+      triangle(birdX, birdY+5, birdX-10, birdY-20, birdX+15, birdY+5);
+      triangle(birdX, birdY-5, birdX-10, birdY-20, birdX+15, birdY-5);
+   }else { 
+     triangle(birdX, birdY+5, birdX-10, birdY+30, birdX+15, birdY+5);
+     triangle(birdX, birdY-5, birdX-10, birdY+30, birdX+15, birdY-5);
+     }
+     
+     fill(234,171,107);
+     triangle(birdX+30, birdY+2, birdX+40, birdY, birdX+30, birdY-2); 
+    }
+void move() {
+   birdX = birdX + birdDX;
+   if(birdX > width) {
+     birdX = 0;
+   }
+    }
+}
