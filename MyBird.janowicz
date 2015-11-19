@@ -1,3 +1,9 @@
+ // for my own knowladge 
+ String news=   "Click any ball to reset it to middle half of table.  (r resets all.)\n  hi!!";
+ 
+ 
+ 
+ 
  Bird b1;
  int count = 0;
  void setup() {
