@@ -55,15 +55,69 @@ class MyStock {
   public double getChangePercent() {
       return 
   
+/****************************************************************
+
+
+/**
+ * Program to create a Stock 
+ * 
+ * class Stock 
+ * 
+ * Rebeca Janowicz
+ * 2/8/16
+ */
+public class Stock
+{
+   public static void main (String[] args) {
+
+  // Creating a stock object 
+    MyStock myStock = new MyStock(); //34.5,34.35); 
+    System.out.println("The name of the Stock is ORACLE CORPORATION");
+    System.out.println("Symbol ORCL: The Change Percentage is"  +
+    myStock.previousClosingPrice + " and current price" +
+    myStock.currentPrice + "is" + 
+    myStock.previousClosingPrice  + "is" +
+    myStock.getChangePercentage()); 
+    
+    
+    MyStock yourStock = new MyStock() ; //34.5,34.35); 
+    System.out.println("The name of the Stock is ORACLE CORPORATION");
+    System.out.println("Symbol ORCL: The Change Percentage is" +
+    yourStock.previousClosingPrice + "current price" +
+    yourStock.currentPrice + "by previous closing price" + 
+    yourStock.previousClosingPrice  + "is" + 
+    yourStock.getChangePercentage()); 
+    
+    
+    //double previousClossingPrice= 34.5;
+    //double currentPrice= 34.35;
   
+  }
+    
+}
+
+class MyStock { 
+ 
+  double previousClossingPrice= 34.5;
+  double currentPrice= 34.35;
   
+  // Constructors 
+  public MyStock() {
+    }
   
-  
-  
-  
-  
-  
-  
-  
+  public MyStock(double newpreviousClossingPrice, double newcurrentPrice) {
+      previousClossingPrice = newpreviousClossingPrice;
+      currentPrice = newcurrentPrice;
   
     }
+   //METHOD
+    /*Obtaine Previous Current Price*/
+    
+  public double getChangePercent() {
+      return (previousClossingPrice - currentPrice)/ (previousClossingPrice);
+    }
+}
+
+
+
+
