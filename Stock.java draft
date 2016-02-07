@@ -1,0 +1,69 @@
+/**
+ * Program to create a Stock 
+ * 
+ * class Stock 
+ * 
+ * Rebeca Janowicz
+ * 2/8/16
+ */
+public class Stock
+{
+   public static void main (String[] args) {
+
+  // Creating a stock object 
+    MyStock myStock = new MyStock(); 
+    System.out.println("The name of the" "Stock is ORACLE CORPORATION");
+    System.out.println("Symbol ORCL: The previous closing price is" +
+    myStock.previousClosingPrice + "is" +
+    myStock.getPreviousClosingPrice());
+    System.out.println("The current price is" + myStock.currentPrice + "is" + 
+    myStock.getCurrentPrice());
+    
+    MyStock yourStock = new MyStock(); 
+    System.out.println("The name of the Stock is ORACLE CORPORATION");
+    System.out.println("Symbol ORCL: The previous closing price is" +
+    yourStock.previousClosingPrice + "is" +
+    yourStock.getPreviousClosingPrice());
+    System.out.println("The current price is" + yourStock.currentPrice + "is" + 
+    yourStock.getCurrentPrice()); 
+    System
+    
+    //double previousClossingPrice= 34.5;
+    //double currentPrice= 34.35;
+  
+  }
+    
+}
+
+class MyStock { 
+ 
+  double previousClossingPrice= 34.5;
+  double currentPrice= 34.35;
+  
+  // Constructors 
+  public MyStock(){
+    }
+  
+  public MyStock(double newpreviousClossingPrice, double newcurrentPrice) {
+      previousClossingPrice = newpreviousClossingPrice;
+      currentPrice = newcurrentPrice;
+  
+    }
+   //METHOD
+    /*Obtaine Previous Current Price*/
+    
+  public double getChangePercent() {
+      return 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    }
